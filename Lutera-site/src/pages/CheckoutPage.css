@@ -122,4 +122,18 @@ input[type="tel"] {
   .form-row {
     grid-template-columns: 1fr;
   }
+<<<<<<< HEAD
+=======
+}
+.loading-location {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.25rem;
+  font-style: italic;
+}
+
+input[readonly] {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+>>>>>>> 21409760a5dde64d4f91bd2d8ad7cbaf6454e900
 }

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "Lutera-site",
   "private": true,
   "version": "0.0.0",
@@ -27,3 +28,30 @@
     "vite": "^6.3.5"
   }
 }
+=======
+  "name": "lutera-site",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.8"
+  }
+}
+>>>>>>> 21409760a5dde64d4f91bd2d8ad7cbaf6454e900

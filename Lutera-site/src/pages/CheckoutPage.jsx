@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { useState, useContext } from 'react'
+=======
+import { useState, useContext, useEffect } from 'react'
+>>>>>>> 21409760a5dde64d4f91bd2d8ad7cbaf6454e900
 import { useNavigate } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
 import './CheckoutPage.css'
@@ -6,6 +10,10 @@ import './CheckoutPage.css'
 function CheckoutPage() {
   const navigate = useNavigate()
   const { cart, clearCart } = useContext(CartContext)
+<<<<<<< HEAD
+=======
+  const [isLoadingLocation, setIsLoadingLocation] = useState(false)
+>>>>>>> 21409760a5dde64d4f91bd2d8ad7cbaf6454e900
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -19,18 +27,62 @@ function CheckoutPage() {
 
   const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)
 
+<<<<<<< HEAD
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     })
+=======
+  const fetchLocationByPincode = async (pincode) => {
+    try {
+      const response = await fetch(`https://api.postalpincode.in/pincode/${pincode}`)
+      const [data] = await response.json()
+      
+      if (data.Status === "Success") {
+        const location = data.PostOffice[0]
+        return {
+          city: location.District,
+          state: location.State
+        }
+      }
+      return null
+    } catch (error) {
+      console.error('Error fetching location:', error)
+      return null
+    }
+  }
+
+  const handleInputChange = async (e) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+
+    if (name === 'zipCode' && value.length === 6) {
+      setIsLoadingLocation(true)
+      const location = await fetchLocationByPincode(value)
+      if (location) {
+        setFormData(prev => ({
+          ...prev,
+          city: location.city,
+          state: location.state
+        }))
+      }
+      setIsLoadingLocation(false)
+    }
+>>>>>>> 21409760a5dde64d4f91bd2d8ad7cbaf6454e900
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     
     try {
+<<<<<<< HEAD
       // Here you would typically send the order to your backend
+=======
+>>>>>>> 21409760a5dde64d4f91bd2d8ad7cbaf6454e900
       const orderData = {
         items: cart,
         total,
@@ -38,7 +90,10 @@ function CheckoutPage() {
         orderDate: new Date().toISOString()
       }
 
+<<<<<<< HEAD
       // Simulate order processing
+=======
+>>>>>>> 21409760a5dde64d4f91bd2d8ad7cbaf6454e900
       await new Promise(resolve => setTimeout(resolve, 1000))
       
       clearCart()
@@ -107,11 +162,28 @@ function CheckoutPage() {
               <div className="form-row">
                 <input
                   type="text"
+<<<<<<< HEAD
+=======
+                  name="zipCode"
+                  placeholder="PIN Code"
+                  value={formData.zipCode}
+                  onChange={handleInputChange}
+                  pattern="[0-9]{6}"
+                  maxLength="6"
+                  required
+                />
+                <input
+                  type="text"
+>>>>>>> 21409760a5dde64d4f91bd2d8ad7cbaf6454e900
                   name="city"
                   placeholder="City"
                   value={formData.city}
                   onChange={handleInputChange}
                   required
+<<<<<<< HEAD
+=======
+                  readOnly
+>>>>>>> 21409760a5dde64d4f91bd2d8ad7cbaf6454e900
                 />
                 <input
                   type="text"
@@ -120,6 +192,7 @@ function CheckoutPage() {
                   value={formData.state}
                   onChange={handleInputChange}
                   required
+<<<<<<< HEAD
                 />
                 <input
                   type="text"
@@ -130,6 +203,14 @@ function CheckoutPage() {
                   required
                 />
               </div>
+=======
+                  readOnly
+                />
+              </div>
+              {isLoadingLocation && (
+                <div className="loading-location">Fetching location details...</div>
+              )}
+>>>>>>> 21409760a5dde64d4f91bd2d8ad7cbaf6454e900
             </div>
             <button type="submit" className="place-order-btn">
               Place Order (₹{total.toFixed(2)})
