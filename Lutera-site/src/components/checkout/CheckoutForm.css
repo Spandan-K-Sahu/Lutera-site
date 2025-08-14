@@ -1,0 +1,59 @@
+.checkout-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  max-width: 500px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.checkout-form h2 {
+  margin-bottom: 1rem;
+  color: #222;
+  text-align: center;
+}
+
+.checkout-form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="email"],
+.checkout-form input[type="tel"] {
+  flex: 1;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.checkout-form input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.checkout-form label {
+  font-size: 1rem;
+  color: #333;
+  margin-right: 1.5rem;
+}
+
+.checkout-form-btn {
+  background: #007b5e;
+  color: #fff;
+  padding: 0.8rem 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.checkout-form-btn:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}

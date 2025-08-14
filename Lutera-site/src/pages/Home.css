@@ -1,0 +1,340 @@
+.home {
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: #111;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.hero-vibe {
+  background: #111;
+  padding: 1rem 0 1rem 0;
+}
+
+.hero-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 2rem;
+  gap: 2rem;
+  padding-bottom: 50px;
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 2rem;
+}
+
+.hero-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+.big-text {
+  font-size: 10rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 2px;
+  font-family: 'Arimo', Arial, sans-serif;
+  width: 100%;
+}
+
+.align-left   { text-align: left;   width: 100%; }
+.align-center { text-align: left;   margin-left: 6vw; width: 100%; }
+.align-right  { text-align: left;   margin-left: 20vw; width: 100%; }
+
+.explore-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  border-radius: 32px;         
+  width: 260px;               
+  height: 70px;              
+  font-size: 1.6rem;           
+  color: #fff;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: background 0.3s, color 0.3s;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.explore-btn:hover {
+  background: #fff;
+  color: #111;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  
+}
+
+.tshirt-stack {
+  position: relative;
+  width: 420px;
+  height: 500px;
+  padding-bottom: 50px;
+  left: 120px;
+}
+
+.tshirt-img {
+  position: absolute;
+  left: 0;
+  width: 400px;
+  border-radius: 12px;
+}
+
+.tshirt-front {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transform: rotate(12deg);
+}
+
+.tshirt-back {
+  z-index: 2;
+  top: 200px;
+  left: 70px;
+  transform: rotate(12deg);
+}
+
+.hero-proud-row {
+  background: #111;
+  padding: 2rem 0 2rem 0;
+}
+
+.hero-proud-row-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.hero-proud-meta h2 {
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 1px;
+  font-family: 'Arimo', Arial, sans-serif;
+  color: #fff;
+  margin: 0;
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .hero-right, .hero-left {
+    padding: 0;
+    width: 100%;
+  }
+  .hero-proud-content h2 {
+    text-align: left;
+    margin: 0 0 0 1rem;
+    font-size: 2.2rem;
+  }
+  .big-text {
+    font-size: 2.5rem;
+  }
+  .explore-btn {
+    width: 80px;
+    height: 80px;
+    font-size: 0.9rem;
+  }
+  .hero-shirt-img {
+    width: 200px;
+  }
+}
+.features-section {
+  margin: 2.5rem 0 2.5rem 0;
+  width: 100%;
+}
+.features-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.feature-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+}
+.feature-label {
+  font-size: 1.6rem;
+  font-family: 'Arimo', Arial, sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+.new-arrivals-section {
+  margin: 3rem 0 3rem 0;
+  padding: 0 2rem;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-arrivals-title {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 700;
+  font-family: 'Arimo', sans-serif;
+  margin-bottom: 2.5rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.slick-slider {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.arrival-card-link {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 100%;
+  text-decoration: none;
+}
+
+.arrival-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.5rem 1rem 1.5rem 1rem;
+  margin: 0 12px 40px 12px;
+  text-align: center;
+  min-height: 340px;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.arrival-img {
+  width: 100%;
+  max-width: 260px;
+  height: 170px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+  margin-top: 0.5rem;
+  background: #f7f7f7;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.arrival-info {
+  margin-top: 0.5rem;
+  width: 100%;
+  color: #222;
+  font-family: 'Arimo', Arial, sans-serif;
+  text-decoration: none;
+}
+
+.arrival-name {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #222;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.arrival-price {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #00a68a;
+  margin-bottom: 0.2rem;
+}
+
+.arrival-type {
+  font-size: 1rem;
+  color: #888;
+  margin-top: 0.2rem;
+  letter-spacing: 1px;
+}
+
+.slick-dots {
+  bottom: -30px;
+}
+
+.slick-dots li {
+  margin: 0 8px;
+}
+
+.slick-dots li button {
+  padding: 0;
+  width: 30px;
+  height: 8px;
+  border-radius: 4px;
+  background: #e0e0e0;
+  transition: background 0.3s;
+}
+
+.slick-dots li.slick-active button {
+  background: #00a68a;
+  width: 30px;
+}
+
+.slick-dots li button:before {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .new-arrivals-title {
+    font-size: 2rem;
+  }
+  .arrival-card {
+    max-width: 90vw;
+    min-height: 280px;
+    padding: 1rem 0.5rem;
+  }
+  .arrival-img {
+    max-width: 90vw;
+    height: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .new-arrivals-section {
+    padding: 0 0.5rem;
+  }
+  .arrival-card {
+    max-width: 98vw;
+    min-height: 220px;
+    padding: 0.7rem 0.2rem;
+  }
+  .arrival-img {
+    max-width: 98vw;
+    height: 90px;
+  }
+}
